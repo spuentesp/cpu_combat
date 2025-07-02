@@ -91,7 +91,6 @@ async fn handle_duel(mut socket: TcpStream, solvers: Arc<SolverRegistry>, mode: 
             }
             P2PMessage::Reply(solution) => {
                 println!("Respuesta del oponente recibida.");
-                // Aquí podrías añadir una lógica para validar la solución del oponente
             }
             P2PMessage::YouWin(reason) => {
                 println!("\n¡VICTORIA! Motivo: {}", reason);
