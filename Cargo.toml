@@ -1,4 +1,5 @@
 [workspace]
+resolver = "3"
 members = [
     "arbiter",
     "competitor",
@@ -10,3 +11,5 @@ members = [
 tokio = { version = "1", features = ["full"] }
 serde = { version = "1.0", features = ["derive"] }
 bincode = "2.0.1"
+hex = "0.4"
+sha2 = "0.10.9"

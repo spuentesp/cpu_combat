@@ -8,3 +8,4 @@ core-challenges = { path = "../core-challenges" } # Para usar los structs y trai
 tokio = { workspace = true }
 bincode = { workspace = true }
 serde = { workspace = true }
+hex.workspace = true
