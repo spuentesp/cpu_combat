@@ -1,6 +1,10 @@
 [package]
 name = "competitor"
 version = "0.1.0"
-edition = "2024"
+edition="2024"
 
 [dependencies]
+core-challenges = { path = "../core-challenges" } # Para usar los structs y traits que definimos
+tokio = { workspace = true }
+bincode = { workspace = true }
+serde = { workspace = true }
