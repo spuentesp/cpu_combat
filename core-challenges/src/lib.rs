@@ -24,7 +24,7 @@ impl fmt::Display for SolverError {
 impl std::error::Error for SolverError {}
 
 
-#[derive(Serialize, Deserialize, Debug, Encode, Decode)]
+#[derive(Serialize, Deserialize, Debug, Encode, Decode, Clone)]
 pub struct Challenge {
     pub name: String,
     pub payload: Vec<u8>,
@@ -44,4 +44,9 @@ pub enum P2PMessage {
 
 pub trait Solver {
     fn solve(&self, payload: &[u8]) -> Result<Solution, SolverError>;
+
+    fn create_challenge(&self, difficulty: u32) -> Result<Challenge, SolverError>;
+
+    fn review_solution(&self, challenge_payload: &[u8], solution: &Solution) -> Result<(), SolverError>;
 }
+
